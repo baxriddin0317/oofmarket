@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *::-webkit-scrollbar{
+    @apply w-0
+  }
+
+  html,
+  body {
+    @apply h-full;
+  }
+  body {
+    @apply bg-brand-bg font-dm-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply w-full bg-btn-bg hover:bg-none hover:bg-brand-primary text-white text-sm/none font-medium tracking-tighter rounded-lg py-4;
+  }
+}
+
+.card-active {
+  @apply !border-brand-red-300
+}
+
+.sidebar-link_active,
+.sidebar-link_active svg {
+  @apply !text-brand-primary font-bold;
+}
+
+.sidebar-link {
+  @apply xl:after:absolute after:top-0 after:right-0 after:w-1 after:h-full after:bg-transparent after:transition-colors after:duration-200 after:rounded-l-md hover:after:bg-brand-primary;
+}
+
+.sidebar-link.sidebar-link_active {
+  @apply after:bg-brand-primary;
+}
+
+/* Custom Select Dropdown */
+.custom-select .select-list {
+  @apply h-0 opacity-0 z-30 overflow-hidden;
+}
+.custom-select .select-list.active {
+  @apply h-auto opacity-100;
+}
+
+/* Tooltip */
+.tooltip {
+  @apply hidden shrink-0 bg-white drop-shadow-tooltip rounded-base absolute bottom-9 left-1/2 -translate-x-1/2 px-3 py-2.5 after:absolute after:border-[8px] after:border-transparent after:border-t-white after:top-full after:left-1/2 after:-translate-x-1/2;
+}
+
+.custom-border-dashed {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23CAD0DFFF' stroke-width='3' stroke-dasharray='10%2c 24' stroke-dashoffset='4' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 12px;
+}
+
+.range-input-item,
+.range-input-item{
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -7 px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+  height: 24px;
+  width: 31px;
+  border-radius: 5px;
+  background: #FF2F94;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+input[type="range"]::-moz-range-thumb{
+  height: 24px;
+  width: 31px;
+  border: none;
+  border-radius: 50%;
+  background: #FF2F94;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}

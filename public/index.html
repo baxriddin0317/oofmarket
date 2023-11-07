@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OffMarket24</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div
+      id="sidebar"
+      class="w-full flex-col lg:w-1/3 xl:w-[290px] h-screen bg-white fixed top-0 left-0 z-40 hidden xl:flex">
+      <div class="hidden lg:block border-b border-brand-gray-300 pt-14 pb-12">
+        <img
+          class="h-7 w-48 mx-auto"
+          src="./assets/logo.svg"
+          alt="Haus Hirsch" />
+      </div>
+
+      <nav class="text-brand-gray-700 font-medium space-y-3.5 pl-8 py-9">
+        <a
+          href="#"
+          class="sidebar-link sidebar-link_active relative flex items-center hover:text-brand-primary font-bold space-x-3 py-1.5 group">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1Z" />
+          </svg>
+          <span> Dashboard </span>
+        </a>
+        <a
+          href="./souch-profile.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M14 7.833v-5.45c.77.291 1.471.743 2.054 1.325l2.904 2.905a5.794 5.794 0 0 1 1.325 2.054h-5.45A.833.833 0 0 1 14 7.833Zm6.667 2.905v7.095A4.172 4.172 0 0 1 16.5 22H8.167A4.172 4.172 0 0 1 4 17.833V6.167A4.172 4.172 0 0 1 8.167 2h3.762c.136 0 .27.01.404.02v5.813a2.5 2.5 0 0 0 2.5 2.5h5.814c.009.134.02.269.02.405ZM14 17.832a.833.833 0 0 0-.833-.833H9a.833.833 0 0 0 0 1.667h4.167a.833.833 0 0 0 .833-.834Zm2.5-3.333a.833.833 0 0 0-.833-.833H9a.834.834 0 0 0 0 1.666h6.667a.834.834 0 0 0 .833-.833Z" />
+          </svg>
+          <span> Deal-Finder </span>
+        </a>
+        <a
+          href="./deal-maker.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <g fill="currentColor" clip-path="url(#a)">
+              <path
+                d="M17.255 11.5h-3.338a1.417 1.417 0 0 1-1.417-1.417V6.736a2.125 2.125 0 0 0-.826-1.688 2.034 2.034 0 0 0-1.757-.378 7.77 7.77 0 0 0 .391 15.168 7.792 7.792 0 0 0 9.02-5.748 2.038 2.038 0 0 0-.377-1.76 2.164 2.164 0 0 0-1.696-.83Z" />
+              <path
+                d="M20.753 8.274a7.03 7.03 0 0 0-.716-1.715 7.147 7.147 0 0 0-4.291-3.295c-.12-.033-.386-.051-.386-.051-.095 0-.505 0-.83.262-.476.376-.551.802-.558.835a1.42 1.42 0 0 0-.038.32v3.328c0 1.174.951 2.125 2.125 2.125H19.4c.444.002.861-.209 1.124-.566.194-.262.294-.582.283-.908a1.498 1.498 0 0 0-.055-.335Z" />
+            </g>
+          </svg>
+          <span> Deal-Maker </span>
+        </a>
+        <a
+          href="./investor.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M6.4 9.2h.2c.77 0 1.4.63 1.4 1.4v7c0 .77-.63 1.4-1.4 1.4h-.2c-.77 0-1.4-.63-1.4-1.4v-7c0-.77.63-1.4 1.4-1.4ZM12 5c.77 0 1.4.63 1.4 1.4v11.2c0 .77-.63 1.4-1.4 1.4-.77 0-1.4-.63-1.4-1.4V6.4c0-.77.63-1.4 1.4-1.4Zm5.6 8c.77 0 1.4.63 1.4 1.4v3.2c0 .77-.63 1.4-1.4 1.4-.77 0-1.4-.63-1.4-1.4v-3.2c0-.77.63-1.4 1.4-1.4Z" />
+          </svg>
+          <span> Immobilien </span>
+        </a>
+        <a
+          href="./benutzerprofil.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4Z" />
+          </svg>
+
+          <span> Benutzerprofil </span>
+        </a>
+        <a
+          href="./chat.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2Zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2ZM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9Z" />
+          </svg>
+          <span> Abmelden </span>
+        </a>
+      </nav>
+
+      <div class="mt-auto space-y-3.5 px-7 py-9">
+        <div class="w-full rounded-3xl bg-btn-bg text-white text-center pb-10">
+          <span class="bg-btn-bg border-[6px] border-white rounded-full w-24 h-24 mx-auto -translate-y-1/2 flex items-center justify-center">
+            <svg class="w-10" xmlns="http://www.w3.org/2000/svg" width={41} height={32} viewBox="0 0 41 32" fill="none">
+              <path d="M20.8028 0.32097L41 20.5182L30.2795 31.2386L10.0823 11.0414L20.8028 0.32097Z" fill="white" />
+              <path d="M0 20.493L20.493 0L31.2135 10.7205L10.7205 31.2135L0 20.493Z" fill="white" />
+            </svg>
+          </span>
+
+          <h2 class="font-bold leading-7 mb-1">Upgrade auf PRO</h2>
+          <p class="text-sm font-mediums">
+            um Zugang zu allen <br>
+            Funktionen zu erhalten!
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="h-full flex flex-col xl:ml-80 2xl:pr-11 p-4 pt-24 xl:p-0 lg:pt-0 xl:pr-6">
+      <!-- Top header -->
+      <div class="hidden lg:flex items-center py-6 xxl:pt-12 xxl:pb-8">
+        <div>
+          <p class="text-sm font-medium text-black/30">Seiten / Immobilien</p>
+          <h2 class="text-black text-3xl xxl:text-4xl font-bold tracking-tight">
+            Neue Immobilie
+          </h2>
+        </div>
+        <p class="text-gray-300 text-xl font-medium tracking-tight ml-auto">
+          ID: 23783411
+        </p>
+        <div
+          class="bg-white inline-flex items-center rounded-full space-x-4 p-2.5 ml-5">
+          <button type="button">
+            <svg
+              class="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24">
+              <path
+                fill="#D5D9E1"
+                d="M19.29 17.29 18 16v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-1.29 1.29c-.63.63-.19 1.71.7 1.71h13.17c.9 0 1.34-1.08.71-1.71ZM16 17H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6Zm-4 5c1.1 0 2-.9 2-2h-4a2 2 0 0 0 2 2Z" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="w-6 h-6 flex items-center justify-center shrink-0">
+            <svg
+              class="w-4 h-4"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 18 18">
+              <path
+                fill="#D5D9E1"
+                d="M9.957 18a8.983 8.983 0 0 0 6.991-3.332.422.422 0 0 0-.406-.68c-4.367.83-8.377-2.517-8.377-6.925 0-2.539 1.36-4.874 3.569-6.131A.422.422 0 0 0 11.6.15 9 9 0 0 0 .957 9a9 9 0 0 0 9 9Z" />
+            </svg>
+          </button>
+          <button type="button">
+            <svg
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 7H13V9H11V7ZM12 17C12.55 17 13 16.55 13 16V12C13 11.45 12.55 11 12 11C11.45 11 11 11.45 11 12V16C11 16.55 11.45 17 12 17ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"
+                fill="#D5D9E1" />
+            </svg>
+          </button>
+          <div class="w-10 h-10 shrink-0 rounded-full">
+            <img
+              class="w-full h-full object-contain"
+              src="./assets/imgs/avatar.png"
+              alt="Default user" />
+          </div>
+        </div>
+        <button type="button" class="sidebar-btn ml-5 xl:hidden">
+          <svg
+            class="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 25 17">
+            <path
+              stroke="#005F5F"
+              stroke-width="2"
+              d="M0 1h25M0 8h25M0 16h25" />
+          </svg>
+          <svg
+            class="hidden w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 21 20">
+            <path
+              stroke="#005F5F"
+              stroke-width="2"
+              d="m1.707 1.293 17.678 17.678M.954 19.132 18.632 1.454" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Content -->
+      <div class="lg:flex gap-8">
+        <div
+          class="flex-1 bg-white rounded-base text-sm/none [&_p]:font-medium [&_p]:tracking-tight space-y-2 py-3">
+          <!-- Adresse -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">Adresse</h3>
+            <div
+              class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Adresse<span class="text-brand-red-300">*</span></p>
+                <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Geben Sie die Adresse ein .." type="text">
+              </div>
+            </div>
+          </div>
+
+          <!-- Grunddaten -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">Grunddaten</h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Objekttitel<span class="text-brand-red-300">*</span></p>
+                <div class="lg:col-span-4">
+                  <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Objekttitel eingeben .." type="text">
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Objektart / -typ<span class="text-brand-red-300">*</span></p>
+                <div class="lg:col-span-4 grid md:grid-cols-2 gap-3.5">
+                  <div class="custom-select relative">
+                    <ul
+                      class="select-list bg-white absolute w-full top-11 left-0 border border-brand-gray-500 rounded-md text-brand-primary text-sm tracking-tight order-1">
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 1
+                      </li>
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 2
+                      </li>
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 3
+                      </li>
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 4
+                      </li>
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 5
+                      </li>
+                    </ul>
+
+                    <div
+                      class="selected h-10 w-full text-sm/10 flex items-center justify-between text-brand-gray-700 border border-brand-gray-500 rounded-md cursor-pointer px-3">
+                      <span>Kategorie auswählen .. </span>
+                      <svg
+                        class="w-3.5 h-2 transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 13 8">
+                        <path
+                          fill="#E0E5F2"
+                          stroke="#E0E5F2"
+                          stroke-width=".5"
+                          d="M11.604.823 11.43.648l-.177.174L6.5 5.516 1.747.822 1.571.648l-.175.175-.572.568-.18.178.18.177 5.5 5.432.176.173.176-.173 5.5-5.432.18-.177-.18-.178-.572-.568Z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="custom-select relative">
+                    <ul
+                      class="select-list bg-white absolute w-full top-11 left-0 border border-brand-gray-500 rounded-md text-brand-primary text-sm tracking-tight order-1">
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 1
+                      </li>
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 2
+                      </li>
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 3
+                      </li>
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 4
+                      </li>
+                      <li
+                        class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                        Option 5
+                      </li>
+                    </ul>
+
+                    <div
+                      class="selected h-10 w-full text-sm/10 flex items-center justify-between text-brand-gray-700 border border-brand-gray-500 rounded-md cursor-pointer px-3">
+                      <span>Kategorie auswählen .. </span>
+                      <svg
+                        class="w-3.5 h-2 transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 13 8">
+                        <path
+                          fill="#E0E5F2"
+                          stroke="#E0E5F2"
+                          stroke-width=".5"
+                          d="M11.604.823 11.43.648l-.177.174L6.5 5.516 1.747.822 1.571.648l-.175.175-.572.568-.18.178.18.177 5.5 5.432.176.173.176-.173 5.5-5.432.18-.177-.18-.178-.572-.568Z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>
+                  Baujahr / Moderniesiert
+                </p>
+                <div class="lg:col-span-4 grid md:grid-cols-2 gap-3.5">
+                  <div class="">
+                    <input class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Bitte Wert eingeben .." type="text">
+                  </div>
+
+                  <div class="">
+                    <input class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Bitte Wert eingeben .." type="text">
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <div class="flex items-center gap-1">
+                  <p>Risikoklasse<span class="text-brand-red-300">*</span></p>
+                  <div
+                      class="relative w-5 h-5 shrink-0 bg-[#EDEDED] flex items-center justify-center rounded-full cursor-pointer group">
+                      <svg
+                        class="w-4 h-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 5 11">
+                        <path
+                          fill="#005F5F"
+                          d="M3.145.519c.282 0 .52.098.71.293a.968.968 0 0 1 .294.711.969.969 0 0 1-.294.711.968.968 0 0 1-.71.294.96.96 0 0 1-.705-.294.969.969 0 0 1-.294-.71.98.98 0 0 1 .288-.712.968.968 0 0 1 .71-.293Zm.423 3.144-1.401 4.86c-.077.278-.116.46-.116.547 0 .05.02.098.061.144a.183.183 0 0 0 .13.061.354.354 0 0 0 .233-.102c.205-.169.45-.474.738-.916l.232.137c-.688 1.198-1.42 1.797-2.194 1.797-.296 0-.533-.082-.711-.246a.85.85 0 0 1-.26-.635c0-.17.039-.383.116-.643l.95-3.268c.092-.314.137-.551.137-.71a.35.35 0 0 0-.13-.267.514.514 0 0 0-.355-.116c-.068 0-.15.002-.246.006l.089-.273 2.317-.376h.41Z" />
+                      </svg>
+                      <div class="tooltip group-hover:block w-52">
+                        <p
+                          class="text-xs text-brand-gray-700 font-medium tracking-tighter pr-2">
+                          Der ImmoScore-Wert sagt aus, wie vollständig eine
+                          Immobilie ausgefüllt ist. Je höher der Wert, desto
+                          aussagekräftiger ist die Immobilie.
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 flex items-center gap-1.5">
+                  <button class="text-brand-gray-700 font-medium text-xs/4 bg-brand-gray-600 py-1 px-2 rounded-md">Opportunistic</button>
+                  <button class="text-brand-red-400 text-xs/4 font-medium text-center bg-brand-red-400/10 border border-brand-red-400 rounded-md py-1 px-2">Core</button>
+                  <button class="text-brand-red-400 text-xs/4 font-medium text-center bg-brand-red-400/10 border border-brand-red-400 rounded-md py-1 px-2">Core Plus</button>
+                  <button class="text-brand-gray-700 font-medium text-xs/4 bg-brand-gray-600 py-1 px-2 rounded-md">Value Add</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Preise -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">Preise</h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Kaufpreis<span class="text-brand-red-300">*</span></p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full flex items-center text-brand-gray-700 border border-brand-gray-500 rounded-md px-3">
+                    <span
+                      class="aspect-square text-brand-gray-400 border-r border-brand-gray-500 leading-10 pr-3.5">
+                      €
+                    </span>
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Außen-Provision<span class="text-brand-red-300">*</span></p>
+                <div class="lg:col-span-4">
+                  <div
+                    class="h-10 w-full flex items-center text-brand-gray-700 border border-brand-gray-500 rounded-md px-3">
+                    <span class="aspect-square text-brand-gray-400 border-r border-brand-gray-500 leading-10 pr-3.5">
+                      %
+                    </span>
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Geben Sie die Adresse ein .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Kaufpreis pro QM<span class="text-brand-red-300">*</span></p>
+                <div class="lg:col-span-4">
+                  <div
+                    class="h-10 w-full flex items-center text-brand-gray-700 border border-brand-gray-500 rounded-md px-3">
+                    <span class="aspect-square text-brand-gray-400 border-r border-brand-gray-500 leading-10 pr-3.5">
+                      %
+                    </span>
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Miete & Rendite -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">Miete & Rendite</h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>JNKM (IST)</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full flex items-center text-brand-gray-700 border border-brand-gray-500 rounded-md px-3">
+                    <span
+                      class="aspect-square text-brand-gray-400 border-r border-brand-gray-500 leading-10 pr-3.5">
+                      €
+                    </span>
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>JNKM (SOLL)</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full flex items-center text-brand-gray-700 border border-brand-gray-500 rounded-md px-3">
+                    <span
+                      class="aspect-square text-brand-gray-400 border-r border-brand-gray-500 leading-10 pr-3.5">
+                      €
+                    </span>
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Bruttorendite (IST)</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full flex items-center text-brand-gray-700 border border-brand-gray-500 rounded-md px-3">
+                    <span class="aspect-square text-brand-gray-400 border-r border-brand-gray-500 leading-10 pr-3.5">
+                      %
+                    </span>
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Bruttorendite (SOLL)</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full flex items-center text-brand-gray-700 border border-brand-gray-500 rounded-md px-3">
+                    <span
+                      class="aspect-square text-brand-gray-400 border-r border-brand-gray-500 leading-10 pr-3.5">
+                      %
+                    </span>
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>X-Fache (IST)</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full text-brand-gray-700 border border-brand-gray-500 rounded-md">
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>X-Fache (SOLL)</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full text-brand-gray-700 border border-brand-gray-500 rounded-md">
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vertragssituation -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">Vertragssituation</h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Vermietung</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full text-brand-gray-700 border border-brand-gray-500 rounded-md">
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Vermietung auswählen .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Tenant</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full text-brand-gray-700 border border-brand-gray-500 rounded-md">
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Tenant auswählen .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Walt</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full text-brand-gray-700 border border-brand-gray-500 rounded-md">
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Geförd. Wohnungsbau</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full text-brand-gray-700 border border-brand-gray-500 rounded-md">
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Geförderter Wohnungsbau auswählen .." />
+                  </div>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Bindungsfrist</p>
+                <div class="lg:col-span-4">
+                  <div class="h-10 w-full text-brand-gray-700 border border-brand-gray-500 rounded-md">
+                    <input
+                      type="text"
+                      class="w-full h-full text-sm border-none px-3.5"
+                      placeholder="Bitte Wert eingeben .." />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flächen -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">Flächen</h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p class="truncate">Vermietbare Wohnfläche</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Wert in m² eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Nutzfläche</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Wert in m² eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Gewerbefläche</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Wert in m² eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Lagerfläche</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Wert in m² eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Bürofläche</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Wert in m² eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Praxisfläche</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Wert in m² eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Oberirdische BGF</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Wert in m² eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Grundstücksfläche</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Wert in m² eingeben .." />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aufteilung -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">
+              Aufteilung
+            </h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p class="truncate">Anzahl der Einheiten<span class="text-brand-red-300">*</span></p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Bitte Wert eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p class="truncate">Anzahl der Stellplätze</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Bitte Wert eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p class="truncate">Etagen<span class="text-brand-red-300">*</span></p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Bitte Wert eingeben .." />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KO-Kriterium -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">
+              KO-Kriterium
+            </h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <div class="flex items-center gap-1">
+                  <p>Risikoklasse<span class="text-brand-red-300">*</span></p>
+                  <div
+                      class="relative w-5 h-5 shrink-0 bg-[#EDEDED] flex items-center justify-center rounded-full cursor-pointer group">
+                      <svg
+                        class="w-4 h-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 5 11">
+                        <path
+                          fill="#005F5F"
+                          d="M3.145.519c.282 0 .52.098.71.293a.968.968 0 0 1 .294.711.969.969 0 0 1-.294.711.968.968 0 0 1-.71.294.96.96 0 0 1-.705-.294.969.969 0 0 1-.294-.71.98.98 0 0 1 .288-.712.968.968 0 0 1 .71-.293Zm.423 3.144-1.401 4.86c-.077.278-.116.46-.116.547 0 .05.02.098.061.144a.183.183 0 0 0 .13.061.354.354 0 0 0 .233-.102c.205-.169.45-.474.738-.916l.232.137c-.688 1.198-1.42 1.797-2.194 1.797-.296 0-.533-.082-.711-.246a.85.85 0 0 1-.26-.635c0-.17.039-.383.116-.643l.95-3.268c.092-.314.137-.551.137-.71a.35.35 0 0 0-.13-.267.514.514 0 0 0-.355-.116c-.068 0-.15.002-.246.006l.089-.273 2.317-.376h.41Z" />
+                      </svg>
+                      <div class="tooltip group-hover:block w-52">
+                        <p
+                          class="text-xs text-brand-gray-700 font-medium tracking-tighter pr-2">
+                          Der ImmoScore-Wert sagt aus, wie vollständig eine
+                          Immobilie ausgefüllt ist. Je höher der Wert, desto
+                          aussagekräftiger ist die Immobilie.
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 flex items-center gap-1.5">
+                  <button class="text-brand-gray-700 font-medium text-xs/4 bg-brand-gray-600 py-1 px-2 rounded-md">Denkmalschutz</button>
+                  <button class="text-brand-gray-700 font-medium text-xs/4 bg-brand-gray-600 py-1 px-2 rounded-md">Erbbaurecht</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freitext -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">Freitext</h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="flex items-center space-x-2.5 mt-2">
+                <p class="text-sm font-bold">Wichtiger Hinweis für Teaser</p>
+                <div
+                      class="relative w-5 h-5 shrink-0 bg-[#EDEDED] flex items-center justify-center rounded-full cursor-pointer group">
+                      <svg
+                        class="w-4 h-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 5 11">
+                        <path
+                          fill="#005F5F"
+                          d="M3.145.519c.282 0 .52.098.71.293a.968.968 0 0 1 .294.711.969.969 0 0 1-.294.711.968.968 0 0 1-.71.294.96.96 0 0 1-.705-.294.969.969 0 0 1-.294-.71.98.98 0 0 1 .288-.712.968.968 0 0 1 .71-.293Zm.423 3.144-1.401 4.86c-.077.278-.116.46-.116.547 0 .05.02.098.061.144a.183.183 0 0 0 .13.061.354.354 0 0 0 .233-.102c.205-.169.45-.474.738-.916l.232.137c-.688 1.198-1.42 1.797-2.194 1.797-.296 0-.533-.082-.711-.246a.85.85 0 0 1-.26-.635c0-.17.039-.383.116-.643l.95-3.268c.092-.314.137-.551.137-.71a.35.35 0 0 0-.13-.267.514.514 0 0 0-.355-.116c-.068 0-.15.002-.246.006l.089-.273 2.317-.376h.41Z" />
+                      </svg>
+                      <div class="tooltip group-hover:block w-52">
+                        <p
+                          class="text-xs text-brand-gray-700 font-medium tracking-tighter pr-2">
+                          Der ImmoScore-Wert sagt aus, wie vollständig eine
+                          Immobilie ausgefüllt ist. Je höher der Wert, desto
+                          aussagekräftiger ist die Immobilie.
+                        </p>
+                      </div>
+                    </div>
+              </div>
+              <div class="space-y-6 pt-3.5">
+                <div>
+                  <label
+                    for="objektbeschreibung"
+                    class="hidden text-sm/none font-medium text-brand-primary tracking-tight mb-3">
+                    Objektbeschreibung
+                  </label>
+                  <textarea
+                    id="Objektbeschreibung"
+                    class="w-full text-brand-gray-700 text-sm border border-brand-gray-500 rounded-md resize-none px-3 py-2"
+                    rows="8"
+                    placeholder="Objektbeschreibung"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">
+              Links
+            </h3>
+            <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Link (z. B. Google Cloud)</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Link eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>3D-Aufnahmen Link</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Link eingeben .." />
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-5 items-center gap-4">
+                <p>Termin Link</p>
+                <div class="lg:col-span-4">
+                  <input
+                    type="text"
+                    class="h-10 w-full text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3"
+                    placeholder="Link eingeben .." />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exposé (PDF) -->
+          <div>
+            <h3 class="text-xl/8 font-bold text-black px-7">Exposé (PDF)</h3>
+            <div class="border-t border-brand-gray-300 py-8 px-7 mt-3">
+              <label
+                for="file"
+                class="relative block custom-border-dashed border-[#CAD0DF] rounded-xl cursor-pointer hover:bg-brand-gray-400/10 transition-colors duration-300">
+                <input id="file" type="file" class="sr-only" />
+                <div class="flex flex-col items-center py-7">
+                  <svg
+                    class="w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 31 31">
+                    <path
+                      fill="#D5D9E1"
+                      d="M12.917 20.667h5.166c.71 0 1.292-.582 1.292-1.292v-6.458h2.054c1.15 0 1.73-1.395.917-2.21L16.417 4.78a1.286 1.286 0 0 0-1.821 0l-5.929 5.929c-.814.814-.245 2.209.904 2.209h2.054v6.458c0 .71.581 1.292 1.292 1.292ZM7.75 23.25h15.5c.71 0 1.292.581 1.292 1.292 0 .71-.582 1.291-1.292 1.291H7.75c-.71 0-1.292-.58-1.292-1.291 0-.71.582-1.292 1.292-1.292Z" />
+                  </svg>
+                  <p
+                    class="!text-brand-gray-500 !text-base/8 tracking-tighter font-bold">
+                    Datei hochladen
+                  </p>
+                  <p class="!text-xs/5 !text-brand-gray-700 font-medium">
+                    Nur PDF-Dateien sind erlaubt
+                  </p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="lg:max-w-xs xxl:max-w-md w-full mt-6 lg:mt-0">
+          <div class="lg:sticky lg:top-10 space-y-6 xl:space-y-9">
+            <!-- Hauptbild -->
+            <div class="bg-white rounded-base">
+              <h3
+                class="text-xl/8 font-bold text-black tracking-tighter py-3 px-7">
+                Hauptbild
+              </h3>
+              <div class="border-t border-brand-gray-300 space-y-3 px-7 py-5">
+                <label
+                  for="file"
+                  class="relative block custom-border-dashed border-[#CAD0DF] rounded-xl cursor-pointer hover:bg-brand-gray-400/10 transition-colors duration-300">
+                  <input id="file" type="file" class="sr-only" />
+                  <div class="flex flex-col items-center py-7">
+                    <svg
+                      class="w-8 h-8"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 31 31">
+                      <path
+                        fill="#D5D9E1"
+                        d="M12.917 20.667h5.166c.71 0 1.292-.582 1.292-1.292v-6.458h2.054c1.15 0 1.73-1.395.917-2.21L16.417 4.78a1.286 1.286 0 0 0-1.821 0l-5.929 5.929c-.814.814-.245 2.209.904 2.209h2.054v6.458c0 .71.581 1.292 1.292 1.292ZM7.75 23.25h15.5c.71 0 1.292.581 1.292 1.292 0 .71-.582 1.291-1.292 1.291H7.75c-.71 0-1.292-.58-1.292-1.291 0-.71.582-1.292 1.292-1.292Z" />
+                    </svg>
+                    <p
+                      class="!text-brand-gray-500 !text-base/8 tracking-tighter font-bold">
+                      Datei hochladen
+                    </p>
+                    <p class="!text-xs/5 !text-brand-gray-700 font-medium">
+                      Nur PDF-Dateien sind erlaubt
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <!-- ImmoScore -->
+            <div class="bg-white rounded-base">
+              <div class="inline-flex items-center space-x-3 py-3 px-7">
+                <h3 class="text-xl/8 font-bold text-black tracking-tighter">
+                  ImmoScore
+                </h3>
+                <div
+                  class="relative w-5 h-5 shrink-0 bg-[#EDEDED] flex items-center justify-center rounded-full cursor-pointer group">
+                  <svg
+                    class="w-4 h-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 5 11">
+                    <path
+                      fill="#005F5F"
+                      d="M3.145.519c.282 0 .52.098.71.293a.968.968 0 0 1 .294.711.969.969 0 0 1-.294.711.968.968 0 0 1-.71.294.96.96 0 0 1-.705-.294.969.969 0 0 1-.294-.71.98.98 0 0 1 .288-.712.968.968 0 0 1 .71-.293Zm.423 3.144-1.401 4.86c-.077.278-.116.46-.116.547 0 .05.02.098.061.144a.183.183 0 0 0 .13.061.354.354 0 0 0 .233-.102c.205-.169.45-.474.738-.916l.232.137c-.688 1.198-1.42 1.797-2.194 1.797-.296 0-.533-.082-.711-.246a.85.85 0 0 1-.26-.635c0-.17.039-.383.116-.643l.95-3.268c.092-.314.137-.551.137-.71a.35.35 0 0 0-.13-.267.514.514 0 0 0-.355-.116c-.068 0-.15.002-.246.006l.089-.273 2.317-.376h.41Z" />
+                  </svg>
+                  <div class="tooltip group-hover:block w-52">
+                    <p
+                      class="text-xs text-brand-gray-700 font-medium tracking-tighter pr-2">
+                      Der ImmoScore-Wert sagt aus, wie vollständig eine
+                      Immobilie ausgefüllt ist. Je höher der Wert, desto
+                      aussagekräftiger ist die Immobilie.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-t border-brand-gray-300 p-7">
+                <div>
+                  <div
+                    class="flex items-center justify-between text-sm text-brand-gray-400 tracking-tighter">
+                    <p>0%</p>
+                    <p>100%</p>
+                  </div>
+                  <div class="relative h-2 bg-[#E8ECF5] rounded-full mt-2">
+                    <div
+                      class="bg-brand-green-200 absolute top-0 left-0 h-full w-3/4 rounded-full"></div>
+                  </div>
+                </div>
+                <p class="text-sm font-medium text-brand-dark-primary mt-5">
+                  Dein ImmoScore liegt bei 75%
+                  <span class="text-2xl">😊</span>
+                </p>
+              </div>
+            </div>
+            <!--  Funktionen -->
+            <div class="bg-white rounded-base">
+              <h3
+                class="text-xl/8 font-bold text-black tracking-tighter py-3 px-7">
+                Funktionen
+              </h3>
+              <div class="border-t border-brand-gray-300 space-y-3 px-7 py-5">
+                <div class="flex items-center space-x-3">
+                  <label
+                    for="toggle-1"
+                    class="relative cursor-pointer block w-8 h-4.5 shrink-0 bg-brand-gray-500 rounded-full overflow-hidden p-0.5">
+                    <input
+                      id="toggle-1"
+                      type="checkbox"
+                      class="peer sr-only" />
+                    <span
+                      class="relative h-full aspect-square rounded-full bg-white block transition-transform duration-300 peer-checked:translate-x-full z-10"></span>
+                    <span
+                      class="peer-checked:bg-brand-green-200 absolute top-0 left-0 w-full h-full transition-colors duration-200"></span>
+                  </label>
+                  <div class="inline-flex items-center space-x-2">
+                    <p class="text-sm font-medium">
+                      Profile unter 75% ausblenden
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <label
+                    for="toggle-2"
+                    class="relative cursor-pointer block w-8 h-4.5 shrink-0 bg-brand-gray-500 rounded-full overflow-hidden p-0.5">
+                    <input
+                      id="toggle-2"
+                      type="checkbox"
+                      class="peer sr-only" />
+                    <span
+                      class="relative h-full aspect-square rounded-full bg-white block transition-transform duration-300 peer-checked:translate-x-full z-10"></span>
+                    <span
+                      class="peer-checked:bg-brand-green-200 absolute top-0 left-0 w-full h-full transition-colors duration-200"></span>
+                  </label>
+                  <div class="inline-flex items-center space-x-2">
+                    <span class="rounded-full bg-brand-green-200/20 text-brand-green-200 px-2 py-1 uppercase text-xs font-bold">ki</span>
+                    <p class="text-sm font-medium">
+                      Teaser ab 75% einblenden
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <label
+                    for="toggle-3"
+                    class="relative cursor-pointer block w-8 h-4.5 shrink-0 bg-brand-gray-500 rounded-full overflow-hidden p-0.5">
+                    <input
+                      id="toggle-3"
+                      type="checkbox"
+                      class="peer sr-only" />
+                    <span
+                      class="relative h-full aspect-square rounded-full bg-white block transition-transform duration-300 peer-checked:translate-x-full z-10"></span>
+                    <span
+                      class="peer-checked:bg-brand-green-200 absolute top-0 left-0 w-full h-full transition-colors duration-200"></span>
+                  </label>
+                  <div class="inline-flex items-center space-x-2">
+                    <span class="rounded-full bg-brand-green-200/20 text-brand-green-200 px-2 py-1 uppercase text-xs font-bold">ki</span>
+                    <p class="text-sm font-medium">
+                      Exposé Versand einschalten
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <label
+                    for="toggle-5"
+                    class="relative cursor-pointer block w-8 h-4.5 shrink-0 bg-brand-gray-500 rounded-full overflow-hidden p-0.5">
+                    <input
+                      id="toggle-5"
+                      type="checkbox"
+                      class="peer sr-only" />
+                    <span
+                      class="relative h-full aspect-square rounded-full bg-white block transition-transform duration-300 peer-checked:translate-x-full z-10"></span>
+                    <span
+                      class="peer-checked:bg-brand-green-200 absolute top-0 left-0 w-full h-full transition-colors duration-200"></span>
+                  </label>
+                  <div class="inline-flex items-center space-x-2">
+                    <p class="text-sm font-medium">
+                      Im Deal-Finder veröffentlichen
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <label
+                    for="toggle-6"
+                    class="relative cursor-pointer block w-8 h-4.5 shrink-0 bg-brand-gray-500 rounded-full overflow-hidden p-0.5">
+                    <input
+                      id="toggle-6"
+                      type="checkbox"
+                      class="peer sr-only" />
+                    <span
+                      class="relative h-full aspect-square rounded-full bg-white block transition-transform duration-300 peer-checked:translate-x-full z-10"></span>
+                    <span
+                      class="peer-checked:bg-brand-green-200 absolute top-0 left-0 w-full h-full transition-colors duration-200"></span>
+                  </label>
+                  <div class="inline-flex items-center space-x-2">
+                    <p class="text-sm font-medium">
+                      Bild der Immobilie anzeigen lassen
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn-primary rounded-2xl">
+              Immobilie speichern
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center text-brand-gray-700 gap-8 py-8 mt-auto">
+        <p class="text-sm">© 2023 OM24 LLC. All Rights Reserved.</p>
+
+        <div class="flex items-center text-sm space-x-14 lg:ml-auto">
+          <a href="#">Deal-Finder</a>
+          <a href="#">Anleitung</a>
+          <a href="#">Blog</a>
+          <a href="#">Lizenz</a>
+        </div>
+        <div class="max-w-md w-full"></div>
+      </footer>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
+
+
+<!-- <div class="grid lg:grid-cols-5 items-center gap-4">
+  <p>
+    Straße nicht anzeigen<span class="text-brand-red-300">*</span>
+  </p>
+  <div>
+    <label
+      for="toggle-three"
+      class="relative cursor-pointer block w-8 h-4.5 shrink-0 bg-brand-gray-500 rounded-full overflow-hidden p-0.5">
+      <input
+        id="toggle-three"
+        type="checkbox"
+        class="peer sr-only" />
+      <span
+        class="relative h-full aspect-square rounded-full bg-white block transition-transform duration-300 peer-checked:translate-x-full z-10"></span>
+      <span
+        class="peer-checked:bg-brand-green-200 absolute top-0 left-0 w-full h-full transition-colors duration-200"></span>
+    </label>
+  </div>
+</div> -->
+
+<!-- Ausstattung -->
+<!-- <div>
+  <h3 class="text-xl/8 font-bold text-black px-7">Ausstattung</h3>
+  <div
+    class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+    <div class="grid lg:grid-cols-5 items-center gap-4">
+      <p>Merkmale</p>
+      <div class="lg:col-span-4 flex items-center flex-wrap gap-1.5">
+        <button
+          type="button"
+          class="bg-brand-gray-600 text-brand-gray-700 text-xs font-medium rounded-md hover:ring-1 hover:ring-brand-green-500 hover:bg-brand-green-500/10 hover:text-brand-green-500 transition-colors duration-200 px-2 py-1">
+          Aufzug
+        </button>
+        <button
+          type="button"
+          class="bg-brand-gray-600 text-brand-gray-700 text-xs font-medium rounded-md hover:ring-1 hover:ring-brand-green-500 hover:bg-brand-green-500/10 hover:text-brand-green-500 transition-colors duration-200 px-2 py-1">
+          Garten
+        </button>
+        <button
+          type="button"
+          class="bg-brand-gray-600 text-brand-gray-700 text-xs font-medium rounded-md hover:ring-1 hover:ring-brand-green-500 hover:bg-brand-green-500/10 hover:text-brand-green-500 transition-colors duration-200 px-2 py-1">
+          Loggia
+        </button>
+        <button
+          type="button"
+          class="bg-brand-gray-600 text-brand-gray-700 text-xs font-medium rounded-md hover:ring-1 hover:ring-brand-green-500 hover:bg-brand-green-500/10 hover:text-brand-green-500 transition-colors duration-200 px-2 py-1">
+          Gäste-WC
+        </button>
+        <button
+          type="button"
+          class="bg-brand-gray-600 text-brand-gray-700 text-xs font-medium rounded-md hover:ring-1 hover:ring-brand-green-500 hover:bg-brand-green-500/10 hover:text-brand-green-500 transition-colors duration-200 px-2 py-1">
+          Barrierefrei
+        </button>
+        <button
+          type="button"
+          class="bg-brand-gray-600 text-brand-gray-700 text-xs font-medium rounded-md hover:ring-1 hover:ring-brand-green-500 hover:bg-brand-green-500/10 hover:text-brand-green-500 transition-colors duration-200 px-2 py-1">
+          Einbauküche
+        </button>
+        <button
+          type="button"
+          class="bg-brand-gray-600 text-brand-gray-700 text-xs font-medium rounded-md hover:ring-1 hover:ring-brand-green-500 hover:bg-brand-green-500/10 hover:text-brand-green-500 transition-colors duration-200 px-2 py-1">
+          Balkon/Terrasse
+        </button>
+        <button
+          type="button"
+          class="bg-brand-gray-600 text-brand-gray-700 text-xs font-medium rounded-md hover:ring-1 hover:ring-brand-green-500 hover:bg-brand-green-500/10 hover:text-brand-green-500 transition-colors duration-200 px-2 py-1">
+          Sauna
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->

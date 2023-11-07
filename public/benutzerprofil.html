@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OffMarket24</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div
+      id="sidebar"
+      class="w-full flex-col lg:w-1/3 xl:w-[290px] h-screen bg-white fixed top-0 left-0 z-40 hidden xl:flex">
+      <div class="hidden lg:block border-b border-brand-gray-300 pt-14 pb-12">
+        <img
+          class="h-7 w-48 mx-auto"
+          src="./assets/logo.svg"
+          alt="Haus Hirsch" />
+      </div>
+
+      <nav class="text-brand-gray-700 font-medium space-y-3.5 pl-8 py-9">
+        <a
+          href="./index.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary font-bold space-x-3 py-1.5 group">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1Z" />
+          </svg>
+          <span> Dashboard </span>
+        </a>
+        <a
+          href="./souch-profile.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M14 7.833v-5.45c.77.291 1.471.743 2.054 1.325l2.904 2.905a5.794 5.794 0 0 1 1.325 2.054h-5.45A.833.833 0 0 1 14 7.833Zm6.667 2.905v7.095A4.172 4.172 0 0 1 16.5 22H8.167A4.172 4.172 0 0 1 4 17.833V6.167A4.172 4.172 0 0 1 8.167 2h3.762c.136 0 .27.01.404.02v5.813a2.5 2.5 0 0 0 2.5 2.5h5.814c.009.134.02.269.02.405ZM14 17.832a.833.833 0 0 0-.833-.833H9a.833.833 0 0 0 0 1.667h4.167a.833.833 0 0 0 .833-.834Zm2.5-3.333a.833.833 0 0 0-.833-.833H9a.834.834 0 0 0 0 1.666h6.667a.834.834 0 0 0 .833-.833Z" />
+          </svg>
+          <span> Deal-Finder </span>
+        </a>
+        <a
+          href="./deal-maker.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <g fill="currentColor" clip-path="url(#a)">
+              <path
+                d="M17.255 11.5h-3.338a1.417 1.417 0 0 1-1.417-1.417V6.736a2.125 2.125 0 0 0-.826-1.688 2.034 2.034 0 0 0-1.757-.378 7.77 7.77 0 0 0 .391 15.168 7.792 7.792 0 0 0 9.02-5.748 2.038 2.038 0 0 0-.377-1.76 2.164 2.164 0 0 0-1.696-.83Z" />
+              <path
+                d="M20.753 8.274a7.03 7.03 0 0 0-.716-1.715 7.147 7.147 0 0 0-4.291-3.295c-.12-.033-.386-.051-.386-.051-.095 0-.505 0-.83.262-.476.376-.551.802-.558.835a1.42 1.42 0 0 0-.038.32v3.328c0 1.174.951 2.125 2.125 2.125H19.4c.444.002.861-.209 1.124-.566.194-.262.294-.582.283-.908a1.498 1.498 0 0 0-.055-.335Z" />
+            </g>
+          </svg>
+          <span> Deal-Maker </span>
+        </a>
+        <a
+          href="./investor.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M6.4 9.2h.2c.77 0 1.4.63 1.4 1.4v7c0 .77-.63 1.4-1.4 1.4h-.2c-.77 0-1.4-.63-1.4-1.4v-7c0-.77.63-1.4 1.4-1.4ZM12 5c.77 0 1.4.63 1.4 1.4v11.2c0 .77-.63 1.4-1.4 1.4-.77 0-1.4-.63-1.4-1.4V6.4c0-.77.63-1.4 1.4-1.4Zm5.6 8c.77 0 1.4.63 1.4 1.4v3.2c0 .77-.63 1.4-1.4 1.4-.77 0-1.4-.63-1.4-1.4v-3.2c0-.77.63-1.4 1.4-1.4Z" />
+          </svg>
+          <span> Immobilien </span>
+        </a>
+        <a
+          href="./benutzerprofil.html"
+          class="sidebar-link  sidebar-link_active  relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4Z" />
+          </svg>
+
+          <span> Benutzerprofil </span>
+        </a>
+        <a
+          href="./chat.html"
+          class="sidebar-link relative flex items-center hover:text-brand-primary space-x-3 group py-1.5">
+          <svg
+            class="w-6 h-6 shrink-0 text-brand-gray-400 group-hover:text-brand-primary"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2Zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2ZM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9Z" />
+          </svg>
+          <span> Abmelden </span>
+        </a>
+      </nav>
+
+      <div class="mt-auto space-y-3.5 px-7 py-9">
+        <div class="w-full rounded-3xl bg-btn-bg text-white text-center pb-10">
+          <span class="bg-btn-bg border-[6px] border-white rounded-full w-24 h-24 mx-auto -translate-y-1/2 flex items-center justify-center">
+            <svg class="w-10" xmlns="http://www.w3.org/2000/svg" width={41} height={32} viewBox="0 0 41 32" fill="none">
+              <path d="M20.8028 0.32097L41 20.5182L30.2795 31.2386L10.0823 11.0414L20.8028 0.32097Z" fill="white" />
+              <path d="M0 20.493L20.493 0L31.2135 10.7205L10.7205 31.2135L0 20.493Z" fill="white" />
+            </svg>
+          </span>
+
+          <h2 class="font-bold leading-7 mb-1">Upgrade auf PRO</h2>
+          <p class="text-sm font-mediums">
+            um Zugang zu allen <br>
+            Funktionen zu erhalten!
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="h-full flex flex-col xl:ml-80 2xl:pr-11 p-4 pt-24 xl:p-0 lg:pt-0 xl:pr-6">
+      <!-- Top header -->
+      <div class="hidden lg:flex items-center py-6 xxl:pt-12 xxl:pb-8">
+        <div>
+          <p class="text-sm font-medium text-black/30">Seiten / Immobilien</p>
+          <h2 class="text-black text-3xl xxl:text-4xl font-bold tracking-tight">
+            Benutzerprofil
+          </h2>
+        </div>
+        <p class="text-gray-300 text-xl font-medium tracking-tight ml-auto">
+          ID: 23783411
+        </p>
+        <div
+          class="bg-white inline-flex items-center rounded-full space-x-4 p-2.5 ml-5">
+          <button type="button">
+            <svg
+              class="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24">
+              <path
+                fill="#D5D9E1"
+                d="M19.29 17.29 18 16v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-1.29 1.29c-.63.63-.19 1.71.7 1.71h13.17c.9 0 1.34-1.08.71-1.71ZM16 17H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6Zm-4 5c1.1 0 2-.9 2-2h-4a2 2 0 0 0 2 2Z" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="w-6 h-6 flex items-center justify-center shrink-0">
+            <svg
+              class="w-4 h-4"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 18 18">
+              <path
+                fill="#D5D9E1"
+                d="M9.957 18a8.983 8.983 0 0 0 6.991-3.332.422.422 0 0 0-.406-.68c-4.367.83-8.377-2.517-8.377-6.925 0-2.539 1.36-4.874 3.569-6.131A.422.422 0 0 0 11.6.15 9 9 0 0 0 .957 9a9 9 0 0 0 9 9Z" />
+            </svg>
+          </button>
+          <button type="button">
+            <svg
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 7H13V9H11V7ZM12 17C12.55 17 13 16.55 13 16V12C13 11.45 12.55 11 12 11C11.45 11 11 11.45 11 12V16C11 16.55 11.45 17 12 17ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"
+                fill="#D5D9E1" />
+            </svg>
+          </button>
+          <div class="w-10 h-10 shrink-0 rounded-full">
+            <img
+              class="w-full h-full object-contain"
+              src="./assets/imgs/avatar.png"
+              alt="Default user" />
+          </div>
+        </div>
+        <button type="button" class="sidebar-btn ml-5 xl:hidden">
+          <svg
+            class="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 25 17">
+            <path
+              stroke="#005F5F"
+              stroke-width="2"
+              d="M0 1h25M0 8h25M0 16h25" />
+          </svg>
+          <svg
+            class="hidden w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 21 20">
+            <path
+              stroke="#005F5F"
+              stroke-width="2"
+              d="m1.707 1.293 17.678 17.678M.954 19.132 18.632 1.454" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Content -->
+      <div class="lg:flex gap-8">
+        <div class="flex-1">
+          <div class="bg-white rounded-base text-sm/none [&_p]:font-medium [&_p]:tracking-tight space-y-2 py-3">
+  
+            <!-- Grunddaten -->
+            <div>
+              <h3 class="text-xl/8 font-bold text-black px-7">Grunddaten</h3>
+              <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+                <div class="grid lg:grid-cols-5 items-center gap-4">
+                  <p>Anrede<span class="text-brand-red-300">*</span></p>
+                  <div class="lg:col-span-4">
+                    <div class="custom-select relative">
+                      <ul
+                        class="select-list bg-white absolute w-full top-11 left-0 border border-brand-gray-500 rounded-md text-brand-primary text-sm tracking-tight order-1">
+                        <li
+                          class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                          Option 1
+                        </li>
+                        <li
+                          class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                          Option 2
+                        </li>
+                        <li
+                          class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                          Option 3
+                        </li>
+                        <li
+                          class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                          Option 4
+                        </li>
+                        <li
+                          class="hover:bg-brand-green-500/10 cursor-pointer py-2 px-3">
+                          Option 5
+                        </li>
+                      </ul>
+  
+                      <div
+                        class="selected h-10 w-full text-sm/10 flex items-center justify-between text-brand-gray-700 border border-brand-gray-500 rounded-md cursor-pointer px-3">
+                        <span>Kategorie auswählen .. </span>
+                        <svg
+                          class="w-3.5 h-2 transition-transform duration-300"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 13 8">
+                          <path
+                            fill="#E0E5F2"
+                            stroke="#E0E5F2"
+                            stroke-width=".5"
+                            d="M11.604.823 11.43.648l-.177.174L6.5 5.516 1.747.822 1.571.648l-.175.175-.572.568-.18.178.18.177 5.5 5.432.176.173.176-.173 5.5-5.432.18-.177-.18-.178-.572-.568Z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 items-center gap-4">
+                  <p>Firma<span class="text-brand-red-300">*</span></p>
+                  <div class="lg:col-span-4">
+                    <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Objekttitel eingeben .." type="text">
+                  </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 items-center gap-4">
+                  <p>Vorname<span class="text-brand-red-300">*</span></p>
+                  <div class="lg:col-span-4">
+                    <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Objekttitel eingeben .." type="text">
+                  </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 items-center gap-4">
+                  <p>Nachname<span class="text-brand-red-300">*</span></p>
+                  <div class="lg:col-span-4">
+                    <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Objekttitel eingeben .." type="text">
+                  </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 items-center gap-4">
+                  <p>Adresse<span class="text-brand-red-300">*</span></p>
+                  <div class="lg:col-span-4">
+                    <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Objekttitel eingeben .." type="text">
+                  </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 items-center gap-4">
+                  <p>E-Mail<span class="text-brand-red-300">*</span></p>
+                  <div class="lg:col-span-4">
+                    <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Objekttitel eingeben .." type="text">
+                  </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 items-center gap-4">
+                  <p>Telefon<span class="text-brand-red-300">*</span></p>
+                  <div class="lg:col-span-4">
+                    <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Objekttitel eingeben .." type="text">
+                  </div>
+                </div>
+                
+                <div class="grid lg:grid-cols-5 items-center gap-4">
+                  <p>Webseite</p>
+                  <div class="lg:col-span-4">
+                    <input class="h-10 w-full lg:col-span-4 text-sm/none text-brand-gray-700 border border-brand-gray-500 rounded-md px-3.5 py-3" placeholder="Objekttitel eingeben .." type="text">
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+
+            <!-- Beschreibung -->
+            <div>
+              <h3 class="text-xl/8 font-bold text-black px-7">Beschreibung</h3>
+              <div class="border-t border-brand-gray-300 space-y-2.5 py-5 px-7 mt-3">
+                <div class="space-y-6 pt-3.5">
+                  <div>
+                    <label
+                      for="objektbeschreibung"
+                      class="hidden text-sm/none font-medium text-brand-primary tracking-tight mb-3">
+                      Objektbeschreibung
+                    </label>
+                    <textarea
+                      id="Objektbeschreibung"
+                      class="w-full text-brand-gray-700 text-sm border border-brand-gray-500 rounded-md resize-none px-3 py-2"
+                      rows="8"
+                      placeholder="Objektbeschreibung"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-base text-sm/none [&_p]:font-medium [&_p]:tracking-tight py-3 mt-12">
+            <!-- Small Screens -->
+            <div class="lg:hidden divide-y divide-brand-gray-300">
+              <div class="flex items-start space-x-4 py-5 px-5">
+                <div>
+                  
+                </div>
+                <div class="flex-1 text-sm font-bold">
+                  <div class="flex items-center">
+                    <p class="md:text-base">Herr Andrzej Fink</p>
+  
+                    <p class="text-xs font-medium text-brand-gray-200 ml-auto">
+                      24.08.2023
+                    </p>
+                    <svg
+                      class="w-5 h-5 shrink-0 ml-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20">
+                      <path
+                        fill="#008E8E"
+                        d="M10 1.667A8.336 8.336 0 0 0 1.667 10c0 4.6 3.733 8.333 8.333 8.333S18.333 14.6 18.333 10 14.6 1.667 10 1.667ZM7.742 13.575 4.75 10.583a.83.83 0 1 1 1.175-1.175l2.408 2.4 5.734-5.733a.83.83 0 1 1 1.175 1.175l-6.325 6.325a.83.83 0 0 1-1.175 0Z" />
+                    </svg>
+                  </div>
+                  <div class="space-y-1 md:space-y-2 mt-2">
+                    <span class="inline-block bg-brand-success-100 text-brand-success-200 text-[10px] xxl:text-xs font-medium rounded px-2 py-1">
+                      Investor
+                    </span>
+                    <p>32</p>
+                    <p>Berlin</p>
+                    <p>Andrzej</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4 py-5 px-5">
+                <div>
+                  
+                </div>
+                <div class="flex-1 text-sm font-bold">
+                  <div class="flex items-center">
+                    <p class="md:text-base">Herr Andrzej Fink</p>
+  
+                    <p class="text-xs font-medium text-brand-gray-200 ml-auto">
+                      24.08.2023
+                    </p>
+                    <svg
+                      class="w-5 h-5 shrink-0 ml-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20">
+                      <path
+                        fill="#008E8E"
+                        d="M10 1.667A8.336 8.336 0 0 0 1.667 10c0 4.6 3.733 8.333 8.333 8.333S18.333 14.6 18.333 10 14.6 1.667 10 1.667ZM7.742 13.575 4.75 10.583a.83.83 0 1 1 1.175-1.175l2.408 2.4 5.734-5.733a.83.83 0 1 1 1.175 1.175l-6.325 6.325a.83.83 0 0 1-1.175 0Z" />
+                    </svg>
+                  </div>
+                  <div class="space-y-1 md:space-y-2 mt-2">
+                    <span class="inline-block bg-brand-success-100 text-brand-success-200 text-[10px] xxl:text-xs font-medium rounded px-2 py-1">
+                      Investor
+                    </span>
+                    <p>32</p>
+                    <p>Berlin</p>
+                    <p>Andrzej</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Desktop Table -->
+            <div class="hidden lg:block">
+              <table
+                class="min-w-full table-fixed divide-y divide-brand-gray-300">
+                <thead class="text-left text-[#B2B7C1]">
+                  <tr>
+                    <th scope="">
+                      <button
+                        type="button"
+                        class="relative w-5 px-3 xxl:px-5 py-5 inline-flex items-center text-xs xxl:text-sm/6 tracking-tight font-medium">
+                        <span>Name</span>
+                        <svg
+                          class="w-6 h-6 shrink-0"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24">
+                          <path
+                            fill="#B2B7C1"
+                            d="M8.12 9.29 12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0Z" />
+                        </svg>
+                      </button>
+                    </th>
+                    <th scope="col" class="py-1">
+                      <button
+                        type="button"
+                        class="inline-flex items-center text-xs xxl:text-sm/6 tracking-tight font-medium">
+                        <span>Erstelldatum</span>
+                        <svg
+                          class="w-6 h-6 shrink-0"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24">
+                          <path
+                            fill="#B2B7C1"
+                            d="M8.12 9.29 12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0Z" />
+                        </svg>
+                      </button>
+                    </th>
+                    <th scope="col" class="text-right py-1 px-5">
+                      <p class="text-xs xxl:text-sm/6 tracking-tight font-medium">
+                        Funktionen
+                      </p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-brand-gray-300 bg-white">
+                  <tr>
+                    <td class="flex items-center gap-1.5 text-xs/5 xxl:text-sm/6 font-bold line-clamp-1 px-3 xxl:px-5 py-5">
+                      <span class="block w-9 h-9 rounded-full bg-brand-gray-400"></span>
+                      <span class="flex-1 line-clamp-1">Shell Germany GmbH</span>
+                    </td>
+                    <td class="text-xs xxl:text-sm/6 font-bold py-3 px-1">
+                      24.08.2023
+                    </td>
+                    <td class="flex items-center justify-end gap-3 py-3 px-5">
+                      <svg
+                        class="w-4 h-4 xxl:w-5 xxl:h-5 ml-auto"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20">
+                        <path
+                          fill="#008E8E"
+                          d="M10 1.667A8.336 8.336 0 0 0 1.667 10c0 4.6 3.733 8.333 8.333 8.333S18.333 14.6 18.333 10 14.6 1.667 10 1.667ZM7.742 13.575 4.75 10.583a.83.83 0 1 1 1.175-1.175l2.408 2.4 5.734-5.733a.83.83 0 1 1 1.175 1.175l-6.325 6.325a.83.83 0 0 1-1.175 0Z" />
+                      </svg>
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M15.2727 2.90909H12.3636V2.18182C12.3636 1.60316 12.1338 1.04821 11.7246 0.63904C11.3154 0.229869 10.7605 0 10.1818 0L5.81818 0C5.23953 0 4.68457 0.229869 4.2754 0.63904C3.86623 1.04821 3.63636 1.60316 3.63636 2.18182V2.90909H0.727273C0.534388 2.90909 0.349403 2.98571 0.213013 3.1221C0.0766231 3.25849 0 3.44348 0 3.63636C0 3.82925 0.0766231 4.01423 0.213013 4.15062C0.349403 4.28701 0.534388 4.36364 0.727273 4.36364H1.49382L2.10909 15.3942C2.14016 15.9515 2.38368 16.4758 2.78953 16.859C3.19538 17.2423 3.7327 17.4554 4.29091 17.4545H11.7149C12.2731 17.4554 12.8104 17.2423 13.2163 16.859C13.6221 16.4758 13.8657 15.9515 13.8967 15.3942L14.5062 4.36364H15.2727C15.4656 4.36364 15.6506 4.28701 15.787 4.15062C15.9234 4.01423 16 3.82925 16 3.63636C16 3.44348 15.9234 3.25849 15.787 3.1221C15.6506 2.98571 15.4656 2.90909 15.2727 2.90909ZM5.09091 2.18182C5.09091 1.98893 5.16753 1.80395 5.30392 1.66756C5.44031 1.53117 5.6253 1.45455 5.81818 1.45455H10.1818C10.3747 1.45455 10.5597 1.53117 10.6961 1.66756C10.8325 1.80395 10.9091 1.98893 10.9091 2.18182V2.90909H5.09091V2.18182ZM5.81818 12.3636C5.81818 12.5565 5.74156 12.7415 5.60517 12.8779C5.46878 13.0143 5.28379 13.0909 5.09091 13.0909C4.89802 13.0909 4.71304 13.0143 4.57665 12.8779C4.44026 12.7415 4.36364 12.5565 4.36364 12.3636V8C4.36364 7.80712 4.44026 7.62213 4.57665 7.48574C4.71304 7.34935 4.89802 7.27273 5.09091 7.27273C5.28379 7.27273 5.46878 7.34935 5.60517 7.48574C5.74156 7.62213 5.81818 7.80712 5.81818 8V12.3636ZM8.72727 12.3636C8.72727 12.5565 8.65065 12.7415 8.51426 12.8779C8.37787 13.0143 8.19288 13.0909 8 13.0909C7.80712 13.0909 7.62213 13.0143 7.48574 12.8779C7.34935 12.7415 7.27273 12.5565 7.27273 12.3636V8C7.27273 7.80712 7.34935 7.62213 7.48574 7.48574C7.62213 7.34935 7.80712 7.27273 8 7.27273C8.19288 7.27273 8.37787 7.34935 8.51426 7.48574C8.65065 7.62213 8.72727 7.80712 8.72727 8V12.3636ZM11.6364 12.3636C11.6364 12.5565 11.5597 12.7415 11.4234 12.8779C11.287 13.0143 11.102 13.0909 10.9091 13.0909C10.7162 13.0909 10.5312 13.0143 10.3948 12.8779C10.2584 12.7415 10.1818 12.5565 10.1818 12.3636V8C10.1818 7.80712 10.2584 7.62213 10.3948 7.48574C10.5312 7.34935 10.7162 7.27273 10.9091 7.27273C11.102 7.27273 11.287 7.34935 11.4234 7.48574C11.5597 7.62213 11.6364 7.80712 11.6364 8V12.3636Z" fill="#B9C5C9"/>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="flex items-center gap-1.5 text-xs/5 xxl:text-sm/6 font-bold line-clamp-1 px-3 xxl:px-5 py-5">
+                      <span class="block w-9 h-9 rounded-full bg-brand-gray-400"></span>
+                      <span class="flex-1 line-clamp-1">Shell Germany GmbH</span>
+                    </td>
+                    <td class="text-xs xxl:text-sm/6 font-bold py-3 px-1">
+                      24.08.2023
+                    </td>
+                    <td class="flex items-center justify-end gap-3 py-3 px-5">
+                      <svg
+                        class="w-4 h-4 xxl:w-5 xxl:h-5 ml-auto"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20">
+                        <path
+                          fill="#008E8E"
+                          d="M10 1.667A8.336 8.336 0 0 0 1.667 10c0 4.6 3.733 8.333 8.333 8.333S18.333 14.6 18.333 10 14.6 1.667 10 1.667ZM7.742 13.575 4.75 10.583a.83.83 0 1 1 1.175-1.175l2.408 2.4 5.734-5.733a.83.83 0 1 1 1.175 1.175l-6.325 6.325a.83.83 0 0 1-1.175 0Z" />
+                      </svg>
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M15.2727 2.90909H12.3636V2.18182C12.3636 1.60316 12.1338 1.04821 11.7246 0.63904C11.3154 0.229869 10.7605 0 10.1818 0L5.81818 0C5.23953 0 4.68457 0.229869 4.2754 0.63904C3.86623 1.04821 3.63636 1.60316 3.63636 2.18182V2.90909H0.727273C0.534388 2.90909 0.349403 2.98571 0.213013 3.1221C0.0766231 3.25849 0 3.44348 0 3.63636C0 3.82925 0.0766231 4.01423 0.213013 4.15062C0.349403 4.28701 0.534388 4.36364 0.727273 4.36364H1.49382L2.10909 15.3942C2.14016 15.9515 2.38368 16.4758 2.78953 16.859C3.19538 17.2423 3.7327 17.4554 4.29091 17.4545H11.7149C12.2731 17.4554 12.8104 17.2423 13.2163 16.859C13.6221 16.4758 13.8657 15.9515 13.8967 15.3942L14.5062 4.36364H15.2727C15.4656 4.36364 15.6506 4.28701 15.787 4.15062C15.9234 4.01423 16 3.82925 16 3.63636C16 3.44348 15.9234 3.25849 15.787 3.1221C15.6506 2.98571 15.4656 2.90909 15.2727 2.90909ZM5.09091 2.18182C5.09091 1.98893 5.16753 1.80395 5.30392 1.66756C5.44031 1.53117 5.6253 1.45455 5.81818 1.45455H10.1818C10.3747 1.45455 10.5597 1.53117 10.6961 1.66756C10.8325 1.80395 10.9091 1.98893 10.9091 2.18182V2.90909H5.09091V2.18182ZM5.81818 12.3636C5.81818 12.5565 5.74156 12.7415 5.60517 12.8779C5.46878 13.0143 5.28379 13.0909 5.09091 13.0909C4.89802 13.0909 4.71304 13.0143 4.57665 12.8779C4.44026 12.7415 4.36364 12.5565 4.36364 12.3636V8C4.36364 7.80712 4.44026 7.62213 4.57665 7.48574C4.71304 7.34935 4.89802 7.27273 5.09091 7.27273C5.28379 7.27273 5.46878 7.34935 5.60517 7.48574C5.74156 7.62213 5.81818 7.80712 5.81818 8V12.3636ZM8.72727 12.3636C8.72727 12.5565 8.65065 12.7415 8.51426 12.8779C8.37787 13.0143 8.19288 13.0909 8 13.0909C7.80712 13.0909 7.62213 13.0143 7.48574 12.8779C7.34935 12.7415 7.27273 12.5565 7.27273 12.3636V8C7.27273 7.80712 7.34935 7.62213 7.48574 7.48574C7.62213 7.34935 7.80712 7.27273 8 7.27273C8.19288 7.27273 8.37787 7.34935 8.51426 7.48574C8.65065 7.62213 8.72727 7.80712 8.72727 8V12.3636ZM11.6364 12.3636C11.6364 12.5565 11.5597 12.7415 11.4234 12.8779C11.287 13.0143 11.102 13.0909 10.9091 13.0909C10.7162 13.0909 10.5312 13.0143 10.3948 12.8779C10.2584 12.7415 10.1818 12.5565 10.1818 12.3636V8C10.1818 7.80712 10.2584 7.62213 10.3948 7.48574C10.5312 7.34935 10.7162 7.27273 10.9091 7.27273C11.102 7.27273 11.287 7.34935 11.4234 7.48574C11.5597 7.62213 11.6364 7.80712 11.6364 8V12.3636Z" fill="#B9C5C9"/>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="flex items-center gap-1.5 text-xs/5 xxl:text-sm/6 font-bold line-clamp-1 px-3 xxl:px-5 py-5">
+                      <span class="block w-9 h-9 rounded-full bg-brand-gray-400"></span>
+                      <span class="flex-1 line-clamp-1">Shell Germany GmbH</span>
+                    </td>
+                    <td class="text-xs xxl:text-sm/6 font-bold py-3 px-1">
+                      24.08.2023
+                    </td>
+                    <td class="flex items-center justify-end gap-3 py-3 px-5">
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M15.2727 2.90909H12.3636V2.18182C12.3636 1.60316 12.1338 1.04821 11.7246 0.63904C11.3154 0.229869 10.7605 0 10.1818 0L5.81818 0C5.23953 0 4.68457 0.229869 4.2754 0.63904C3.86623 1.04821 3.63636 1.60316 3.63636 2.18182V2.90909H0.727273C0.534388 2.90909 0.349403 2.98571 0.213013 3.1221C0.0766231 3.25849 0 3.44348 0 3.63636C0 3.82925 0.0766231 4.01423 0.213013 4.15062C0.349403 4.28701 0.534388 4.36364 0.727273 4.36364H1.49382L2.10909 15.3942C2.14016 15.9515 2.38368 16.4758 2.78953 16.859C3.19538 17.2423 3.7327 17.4554 4.29091 17.4545H11.7149C12.2731 17.4554 12.8104 17.2423 13.2163 16.859C13.6221 16.4758 13.8657 15.9515 13.8967 15.3942L14.5062 4.36364H15.2727C15.4656 4.36364 15.6506 4.28701 15.787 4.15062C15.9234 4.01423 16 3.82925 16 3.63636C16 3.44348 15.9234 3.25849 15.787 3.1221C15.6506 2.98571 15.4656 2.90909 15.2727 2.90909ZM5.09091 2.18182C5.09091 1.98893 5.16753 1.80395 5.30392 1.66756C5.44031 1.53117 5.6253 1.45455 5.81818 1.45455H10.1818C10.3747 1.45455 10.5597 1.53117 10.6961 1.66756C10.8325 1.80395 10.9091 1.98893 10.9091 2.18182V2.90909H5.09091V2.18182ZM5.81818 12.3636C5.81818 12.5565 5.74156 12.7415 5.60517 12.8779C5.46878 13.0143 5.28379 13.0909 5.09091 13.0909C4.89802 13.0909 4.71304 13.0143 4.57665 12.8779C4.44026 12.7415 4.36364 12.5565 4.36364 12.3636V8C4.36364 7.80712 4.44026 7.62213 4.57665 7.48574C4.71304 7.34935 4.89802 7.27273 5.09091 7.27273C5.28379 7.27273 5.46878 7.34935 5.60517 7.48574C5.74156 7.62213 5.81818 7.80712 5.81818 8V12.3636ZM8.72727 12.3636C8.72727 12.5565 8.65065 12.7415 8.51426 12.8779C8.37787 13.0143 8.19288 13.0909 8 13.0909C7.80712 13.0909 7.62213 13.0143 7.48574 12.8779C7.34935 12.7415 7.27273 12.5565 7.27273 12.3636V8C7.27273 7.80712 7.34935 7.62213 7.48574 7.48574C7.62213 7.34935 7.80712 7.27273 8 7.27273C8.19288 7.27273 8.37787 7.34935 8.51426 7.48574C8.65065 7.62213 8.72727 7.80712 8.72727 8V12.3636ZM11.6364 12.3636C11.6364 12.5565 11.5597 12.7415 11.4234 12.8779C11.287 13.0143 11.102 13.0909 10.9091 13.0909C10.7162 13.0909 10.5312 13.0143 10.3948 12.8779C10.2584 12.7415 10.1818 12.5565 10.1818 12.3636V8C10.1818 7.80712 10.2584 7.62213 10.3948 7.48574C10.5312 7.34935 10.7162 7.27273 10.9091 7.27273C11.102 7.27273 11.287 7.34935 11.4234 7.48574C11.5597 7.62213 11.6364 7.80712 11.6364 8V12.3636Z" fill="#B9C5C9"/>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="flex items-center gap-1.5 text-xs/5 xxl:text-sm/6 font-bold line-clamp-1 px-3 xxl:px-5 py-5">
+                      <span class="block w-9 h-9 rounded-full bg-brand-gray-400"></span>
+                      <span class="flex-1 line-clamp-1">Shell Germany GmbH</span>
+                    </td>
+                    <td class="text-xs xxl:text-sm/6 font-bold py-3 px-1">
+                      24.08.2023
+                    </td>
+                    <td class="flex items-center justify-end gap-3 py-3 px-5">
+                      <svg
+                        class="w-4 h-4 xxl:w-5 xxl:h-5 ml-auto"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20">
+                        <path
+                          fill="#008E8E"
+                          d="M10 1.667A8.336 8.336 0 0 0 1.667 10c0 4.6 3.733 8.333 8.333 8.333S18.333 14.6 18.333 10 14.6 1.667 10 1.667ZM7.742 13.575 4.75 10.583a.83.83 0 1 1 1.175-1.175l2.408 2.4 5.734-5.733a.83.83 0 1 1 1.175 1.175l-6.325 6.325a.83.83 0 0 1-1.175 0Z" />
+                      </svg>
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M15.2727 2.90909H12.3636V2.18182C12.3636 1.60316 12.1338 1.04821 11.7246 0.63904C11.3154 0.229869 10.7605 0 10.1818 0L5.81818 0C5.23953 0 4.68457 0.229869 4.2754 0.63904C3.86623 1.04821 3.63636 1.60316 3.63636 2.18182V2.90909H0.727273C0.534388 2.90909 0.349403 2.98571 0.213013 3.1221C0.0766231 3.25849 0 3.44348 0 3.63636C0 3.82925 0.0766231 4.01423 0.213013 4.15062C0.349403 4.28701 0.534388 4.36364 0.727273 4.36364H1.49382L2.10909 15.3942C2.14016 15.9515 2.38368 16.4758 2.78953 16.859C3.19538 17.2423 3.7327 17.4554 4.29091 17.4545H11.7149C12.2731 17.4554 12.8104 17.2423 13.2163 16.859C13.6221 16.4758 13.8657 15.9515 13.8967 15.3942L14.5062 4.36364H15.2727C15.4656 4.36364 15.6506 4.28701 15.787 4.15062C15.9234 4.01423 16 3.82925 16 3.63636C16 3.44348 15.9234 3.25849 15.787 3.1221C15.6506 2.98571 15.4656 2.90909 15.2727 2.90909ZM5.09091 2.18182C5.09091 1.98893 5.16753 1.80395 5.30392 1.66756C5.44031 1.53117 5.6253 1.45455 5.81818 1.45455H10.1818C10.3747 1.45455 10.5597 1.53117 10.6961 1.66756C10.8325 1.80395 10.9091 1.98893 10.9091 2.18182V2.90909H5.09091V2.18182ZM5.81818 12.3636C5.81818 12.5565 5.74156 12.7415 5.60517 12.8779C5.46878 13.0143 5.28379 13.0909 5.09091 13.0909C4.89802 13.0909 4.71304 13.0143 4.57665 12.8779C4.44026 12.7415 4.36364 12.5565 4.36364 12.3636V8C4.36364 7.80712 4.44026 7.62213 4.57665 7.48574C4.71304 7.34935 4.89802 7.27273 5.09091 7.27273C5.28379 7.27273 5.46878 7.34935 5.60517 7.48574C5.74156 7.62213 5.81818 7.80712 5.81818 8V12.3636ZM8.72727 12.3636C8.72727 12.5565 8.65065 12.7415 8.51426 12.8779C8.37787 13.0143 8.19288 13.0909 8 13.0909C7.80712 13.0909 7.62213 13.0143 7.48574 12.8779C7.34935 12.7415 7.27273 12.5565 7.27273 12.3636V8C7.27273 7.80712 7.34935 7.62213 7.48574 7.48574C7.62213 7.34935 7.80712 7.27273 8 7.27273C8.19288 7.27273 8.37787 7.34935 8.51426 7.48574C8.65065 7.62213 8.72727 7.80712 8.72727 8V12.3636ZM11.6364 12.3636C11.6364 12.5565 11.5597 12.7415 11.4234 12.8779C11.287 13.0143 11.102 13.0909 10.9091 13.0909C10.7162 13.0909 10.5312 13.0143 10.3948 12.8779C10.2584 12.7415 10.1818 12.5565 10.1818 12.3636V8C10.1818 7.80712 10.2584 7.62213 10.3948 7.48574C10.5312 7.34935 10.7162 7.27273 10.9091 7.27273C11.102 7.27273 11.287 7.34935 11.4234 7.48574C11.5597 7.62213 11.6364 7.80712 11.6364 8V12.3636Z" fill="#B9C5C9"/>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="flex items-center gap-1.5 text-xs/5 xxl:text-sm/6 font-bold line-clamp-1 px-3 xxl:px-5 py-5">
+                      <span class="block w-9 h-9 rounded-full bg-brand-gray-400"></span>
+                      <span class="flex-1 line-clamp-1">Shell Germany GmbH</span>
+                    </td>
+                    <td class="text-xs xxl:text-sm/6 font-bold py-3 px-1">
+                      24.08.2023
+                    </td>
+                    <td class="flex items-center justify-end gap-3 py-3 px-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9.99984 1.66669C5.39984 1.66669 1.6665 5.40002 1.6665 10C1.6665 14.6 5.39984 18.3334 9.99984 18.3334C14.5998 18.3334 18.3332 14.6 18.3332 10C18.3332 5.40002 14.5998 1.66669 9.99984 1.66669ZM10.8332 14.1667H9.1665V12.5H10.8332V14.1667ZM10.8332 10.8334H9.1665V5.83335H10.8332V10.8334Z" fill="#FFCE20"/>
+                      </svg>
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M15.2727 2.90909H12.3636V2.18182C12.3636 1.60316 12.1338 1.04821 11.7246 0.63904C11.3154 0.229869 10.7605 0 10.1818 0L5.81818 0C5.23953 0 4.68457 0.229869 4.2754 0.63904C3.86623 1.04821 3.63636 1.60316 3.63636 2.18182V2.90909H0.727273C0.534388 2.90909 0.349403 2.98571 0.213013 3.1221C0.0766231 3.25849 0 3.44348 0 3.63636C0 3.82925 0.0766231 4.01423 0.213013 4.15062C0.349403 4.28701 0.534388 4.36364 0.727273 4.36364H1.49382L2.10909 15.3942C2.14016 15.9515 2.38368 16.4758 2.78953 16.859C3.19538 17.2423 3.7327 17.4554 4.29091 17.4545H11.7149C12.2731 17.4554 12.8104 17.2423 13.2163 16.859C13.6221 16.4758 13.8657 15.9515 13.8967 15.3942L14.5062 4.36364H15.2727C15.4656 4.36364 15.6506 4.28701 15.787 4.15062C15.9234 4.01423 16 3.82925 16 3.63636C16 3.44348 15.9234 3.25849 15.787 3.1221C15.6506 2.98571 15.4656 2.90909 15.2727 2.90909ZM5.09091 2.18182C5.09091 1.98893 5.16753 1.80395 5.30392 1.66756C5.44031 1.53117 5.6253 1.45455 5.81818 1.45455H10.1818C10.3747 1.45455 10.5597 1.53117 10.6961 1.66756C10.8325 1.80395 10.9091 1.98893 10.9091 2.18182V2.90909H5.09091V2.18182ZM5.81818 12.3636C5.81818 12.5565 5.74156 12.7415 5.60517 12.8779C5.46878 13.0143 5.28379 13.0909 5.09091 13.0909C4.89802 13.0909 4.71304 13.0143 4.57665 12.8779C4.44026 12.7415 4.36364 12.5565 4.36364 12.3636V8C4.36364 7.80712 4.44026 7.62213 4.57665 7.48574C4.71304 7.34935 4.89802 7.27273 5.09091 7.27273C5.28379 7.27273 5.46878 7.34935 5.60517 7.48574C5.74156 7.62213 5.81818 7.80712 5.81818 8V12.3636ZM8.72727 12.3636C8.72727 12.5565 8.65065 12.7415 8.51426 12.8779C8.37787 13.0143 8.19288 13.0909 8 13.0909C7.80712 13.0909 7.62213 13.0143 7.48574 12.8779C7.34935 12.7415 7.27273 12.5565 7.27273 12.3636V8C7.27273 7.80712 7.34935 7.62213 7.48574 7.48574C7.62213 7.34935 7.80712 7.27273 8 7.27273C8.19288 7.27273 8.37787 7.34935 8.51426 7.48574C8.65065 7.62213 8.72727 7.80712 8.72727 8V12.3636ZM11.6364 12.3636C11.6364 12.5565 11.5597 12.7415 11.4234 12.8779C11.287 13.0143 11.102 13.0909 10.9091 13.0909C10.7162 13.0909 10.5312 13.0143 10.3948 12.8779C10.2584 12.7415 10.1818 12.5565 10.1818 12.3636V8C10.1818 7.80712 10.2584 7.62213 10.3948 7.48574C10.5312 7.34935 10.7162 7.27273 10.9091 7.27273C11.102 7.27273 11.287 7.34935 11.4234 7.48574C11.5597 7.62213 11.6364 7.80712 11.6364 8V12.3636Z" fill="#B9C5C9"/>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="flex items-center gap-1.5 text-xs/5 xxl:text-sm/6 font-bold line-clamp-1 px-3 xxl:px-5 py-5">
+                      <span class="block w-9 h-9 rounded-full bg-brand-gray-400"></span>
+                      <span class="flex-1 line-clamp-1">Shell Germany GmbH</span>
+                    </td>
+                    <td class="text-xs xxl:text-sm/6 font-bold py-3 px-1">
+                      24.08.2023
+                    </td>
+                    <td class="flex items-center justify-end gap-3 py-3 px-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9.99984 1.66669C5.39984 1.66669 1.6665 5.40002 1.6665 10C1.6665 14.6 5.39984 18.3334 9.99984 18.3334C14.5998 18.3334 18.3332 14.6 18.3332 10C18.3332 5.40002 14.5998 1.66669 9.99984 1.66669ZM10.8332 14.1667H9.1665V12.5H10.8332V14.1667ZM10.8332 10.8334H9.1665V5.83335H10.8332V10.8334Z" fill="#FFCE20"/>
+                      </svg>
+                      <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M15.2727 2.90909H12.3636V2.18182C12.3636 1.60316 12.1338 1.04821 11.7246 0.63904C11.3154 0.229869 10.7605 0 10.1818 0L5.81818 0C5.23953 0 4.68457 0.229869 4.2754 0.63904C3.86623 1.04821 3.63636 1.60316 3.63636 2.18182V2.90909H0.727273C0.534388 2.90909 0.349403 2.98571 0.213013 3.1221C0.0766231 3.25849 0 3.44348 0 3.63636C0 3.82925 0.0766231 4.01423 0.213013 4.15062C0.349403 4.28701 0.534388 4.36364 0.727273 4.36364H1.49382L2.10909 15.3942C2.14016 15.9515 2.38368 16.4758 2.78953 16.859C3.19538 17.2423 3.7327 17.4554 4.29091 17.4545H11.7149C12.2731 17.4554 12.8104 17.2423 13.2163 16.859C13.6221 16.4758 13.8657 15.9515 13.8967 15.3942L14.5062 4.36364H15.2727C15.4656 4.36364 15.6506 4.28701 15.787 4.15062C15.9234 4.01423 16 3.82925 16 3.63636C16 3.44348 15.9234 3.25849 15.787 3.1221C15.6506 2.98571 15.4656 2.90909 15.2727 2.90909ZM5.09091 2.18182C5.09091 1.98893 5.16753 1.80395 5.30392 1.66756C5.44031 1.53117 5.6253 1.45455 5.81818 1.45455H10.1818C10.3747 1.45455 10.5597 1.53117 10.6961 1.66756C10.8325 1.80395 10.9091 1.98893 10.9091 2.18182V2.90909H5.09091V2.18182ZM5.81818 12.3636C5.81818 12.5565 5.74156 12.7415 5.60517 12.8779C5.46878 13.0143 5.28379 13.0909 5.09091 13.0909C4.89802 13.0909 4.71304 13.0143 4.57665 12.8779C4.44026 12.7415 4.36364 12.5565 4.36364 12.3636V8C4.36364 7.80712 4.44026 7.62213 4.57665 7.48574C4.71304 7.34935 4.89802 7.27273 5.09091 7.27273C5.28379 7.27273 5.46878 7.34935 5.60517 7.48574C5.74156 7.62213 5.81818 7.80712 5.81818 8V12.3636ZM8.72727 12.3636C8.72727 12.5565 8.65065 12.7415 8.51426 12.8779C8.37787 13.0143 8.19288 13.0909 8 13.0909C7.80712 13.0909 7.62213 13.0143 7.48574 12.8779C7.34935 12.7415 7.27273 12.5565 7.27273 12.3636V8C7.27273 7.80712 7.34935 7.62213 7.48574 7.48574C7.62213 7.34935 7.80712 7.27273 8 7.27273C8.19288 7.27273 8.37787 7.34935 8.51426 7.48574C8.65065 7.62213 8.72727 7.80712 8.72727 8V12.3636ZM11.6364 12.3636C11.6364 12.5565 11.5597 12.7415 11.4234 12.8779C11.287 13.0143 11.102 13.0909 10.9091 13.0909C10.7162 13.0909 10.5312 13.0143 10.3948 12.8779C10.2584 12.7415 10.1818 12.5565 10.1818 12.3636V8C10.1818 7.80712 10.2584 7.62213 10.3948 7.48574C10.5312 7.34935 10.7162 7.27273 10.9091 7.27273C11.102 7.27273 11.287 7.34935 11.4234 7.48574C11.5597 7.62213 11.6364 7.80712 11.6364 8V12.3636Z" fill="#B9C5C9"/>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="lg:max-w-xs xxl:max-w-md w-full mt-6 lg:mt-0">
+          <div class="lg:sticky lg:top-10 space-y-6 xl:space-y-9">
+            <!-- Profilbild -->
+            <div class="bg-white rounded-base">
+              <h3
+                class="text-xl/8 font-bold text-black tracking-tighter py-3 px-7">
+                Profilbild
+              </h3>
+              <div class="border-t border-brand-gray-300 space-y-3 px-7 py-5">
+                <label
+                  for="file"
+                  class="relative block custom-border-dashed border-[#CAD0DF] rounded-xl cursor-pointer hover:bg-brand-gray-400/10 transition-colors duration-300">
+                  <input id="file" type="file" class="sr-only" />
+                  <div class="flex flex-col items-center py-7">
+                    <svg
+                      class="w-8 h-8"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 31 31">
+                      <path
+                        fill="#D5D9E1"
+                        d="M12.917 20.667h5.166c.71 0 1.292-.582 1.292-1.292v-6.458h2.054c1.15 0 1.73-1.395.917-2.21L16.417 4.78a1.286 1.286 0 0 0-1.821 0l-5.929 5.929c-.814.814-.245 2.209.904 2.209h2.054v6.458c0 .71.581 1.292 1.292 1.292ZM7.75 23.25h15.5c.71 0 1.292.581 1.292 1.292 0 .71-.582 1.291-1.292 1.291H7.75c-.71 0-1.292-.58-1.292-1.291 0-.71.582-1.292 1.292-1.292Z" />
+                    </svg>
+                    <p
+                      class="!text-brand-gray-500 !text-base/8 tracking-tighter font-bold">
+                      Datei hochladen
+                    </p>
+                    <p class="!text-xs/5 !text-brand-gray-700 font-medium">
+                      Nur PDF-Dateien sind erlaubt
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <!--  Funktionen -->
+            <div class="bg-white rounded-base">
+              <h3
+                class="text-xl/8 font-bold text-black tracking-tighter py-3 px-7">
+                Funktionen
+              </h3>
+              <div class="border-t border-brand-gray-300 space-y-3 px-7 py-5">
+                <div class="flex items-center space-x-3">
+                  <label
+                    for="toggle-one"
+                    class="relative cursor-pointer block w-8 h-4.5 shrink-0 bg-brand-gray-500 rounded-full overflow-hidden p-0.5">
+                    <input
+                      id="toggle-one"
+                      type="checkbox"
+                      class="peer sr-only" />
+                    <span
+                      class="relative h-full aspect-square rounded-full bg-white block transition-transform duration-300 peer-checked:translate-x-full z-10"></span>
+                    <span
+                      class="peer-checked:bg-brand-green-200 absolute top-0 left-0 w-full h-full transition-colors duration-200"></span>
+                  </label>
+                  <div class="inline-flex items-center space-x-2">
+                    <p class="text-sm font-medium">
+                      Profil sichtbar machen
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn-primary rounded-2xl">
+              Profil speichern
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center text-brand-gray-700 gap-8 py-8 mt-auto">
+        <p class="text-sm">© 2023 OM24 LLC. All Rights Reserved.</p>
+
+        <div class="flex items-center text-sm space-x-14 lg:ml-auto">
+          <a href="#">Deal-Finder</a>
+          <a href="#">Anleitung</a>
+          <a href="#">Blog</a>
+          <a href="#">Lizenz</a>
+        </div>
+        <div class="max-w-md w-full"></div>
+      </footer>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
